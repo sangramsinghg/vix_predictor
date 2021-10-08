@@ -58,7 +58,7 @@ def correlation_filter(series, min_corr=0.20, key_column='^VIX', eliminate_first
     return filtered_series
 
 
-def retrieve_yahoo_close(ticker = 'spy', start_date = '2007-07-01', end_date = '2021-10-03'):
+def retrieve_yahoo_close(ticker = 'spy', start_date = '2007-07-02', end_date = '2021-10-01'):
     try:
         # get data based on ticker
         yahoo_data = yf.Ticker(ticker)
@@ -76,7 +76,7 @@ def retrieve_yahoo_close(ticker = 'spy', start_date = '2007-07-01', end_date = '
 
         
 # Define function to retrieve daily volume data from yahoo using ticker, start date and end date
-def retrieve_yahoo_volume(ticker = 'spy', start_date = '2007-07-01', end_date = '2021-10-03'):
+def retrieve_yahoo_volume(ticker = 'spy', start_date = '2007-07-02', end_date = '2021-10-01'):
     try:
         # get data based on ticker
         yahoo_data = yf.Ticker(ticker)
@@ -93,7 +93,7 @@ def retrieve_yahoo_volume(ticker = 'spy', start_date = '2007-07-01', end_date = 
         print(f"Sorry, Data not available for '{ticker}': Exception is {ex}")
 
 # Define function to retrieve put daily volume data from yahoo using ticker, start date and end date
-def retrieve_yahoo_put_options_volume(ticker = 'spy', date = '2007-07-01'):
+def retrieve_yahoo_put_options_volume(ticker = 'spy', date = '2004-01-01'):
     try:
         # get data based on ticker
         yahoo_data = yf.Ticker(ticker)

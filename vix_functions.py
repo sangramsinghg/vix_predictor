@@ -14,13 +14,13 @@ def garch_fit_and_predict(series, horizon=1, p=1, q=1, o=1):
     
     """
     This function takes a series of returns, and get back a series of conditional volatility
-    modeled using a GJR-GARCH with one shock, and t-student distribution of errors that accept a skew.
+    modeled using a GJR-GARCH with one shock, and t-student distribution of errors that accepts a skew.
     
     In the NN model X is shifted in one lag to be able to predict.
     This GARCH series is the GARCH prediction for the volatility of r series that goes in paralell.
     Once X shift, we want to have (r_{t-1})^2 in one column, and the garch_prediction_t in another. 
     This way we are going to include the ARCH prediction to the model.
-    If I think that I need to put e_{t-1}^2 together with garch_prediction_{t-1} I am wrong. please think again.
+    If I think that I need to put e_{t-1}^2 together with garch_prediction_{t-1} I am wrong. Please think again.
     """
 
     series=series.dropna()
@@ -42,7 +42,7 @@ def garch_fit_and_predict(series, horizon=1, p=1, q=1, o=1):
     serie_garch_before_shift=conditional_volatility.shift(-1)
     serie_garch_before_shift.iloc[-1,:]=forecast.variance.iloc[-1]
 
-    return serie_garch_before_shift
+    return serie_garch_before_shift/100
 
 
 def correlation_filter(series, min_corr=0.20, key_column='^VIX', eliminate_first_column=False):

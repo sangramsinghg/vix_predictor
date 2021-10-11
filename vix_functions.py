@@ -7,7 +7,7 @@ from datetime import datetime
 import numpy as np
 
 
-def garch_fit_and_predict(series, horizon=1, p=1, q=1, o=1):
+def garch_fit_and_predict(series, ticker, horizon=1, p=1, q=1, o=1):
     #p=1,q=1, o=1 
     #series=returns_df['spy']
     #horizon=1
@@ -25,15 +25,16 @@ def garch_fit_and_predict(series, horizon=1, p=1, q=1, o=1):
 
     series=series.dropna()
     shock_skew_gm_model=arch_model(
-                    100*series, 
+                    10*series, 
                     p=p, q=q, o=o,
                     mean='constant',
                     vol='GARCH',
                     dist='skewt'
     )
+    print(f"starting series: {ticker}" )
     #Fit GARCH model and predict
     results_shock_skew_gm=shock_skew_gm_model.fit(update_freq=0, disp="off")
-
+    
     conditional_volatility=results_shock_skew_gm.conditional_volatility
     #summary               =results_shock_skew_gm.summary()
     forecast              =results_shock_skew_gm.forecast(horizon=1, reindex=False)
@@ -42,7 +43,7 @@ def garch_fit_and_predict(series, horizon=1, p=1, q=1, o=1):
     serie_garch_before_shift=conditional_volatility.shift(-1)
     serie_garch_before_shift.iloc[-1,:]=forecast.variance.iloc[-1]
 
-    return serie_garch_before_shift/100
+    return serie_garch_before_shift/10000
 
 
 def correlation_filter(series, min_corr=0.20, key_column='^VIX', eliminate_first_column=False):

@@ -7,7 +7,7 @@ from datetime import datetime
 import numpy as np
 
 
-def garch_fit_and_predict(series, ticker, horizon=1, p=1, q=1, o=1):
+def garch_fit_and_predict(series, ticker, horizon=1, p=1, q=1, o=1, print_series_name=False):
     #p=1,q=1, o=1 
     #series=returns_df['spy']
     #horizon=1

@@ -29,10 +29,16 @@ def garch_fit_and_predict(series, ticker, horizon=1, p=1, q=1, o=1, print_series
                     p=p, q=q, o=o,
                     mean='constant',
                     vol='GARCH',
-                    dist='skewt'
+                    dist='skewt',
+                    rescale=True
+                    
     )
-    print(f"starting series: {ticker}" )
+    print(f"Processing series: {ticker}....." )
+    
+    
     #Fit GARCH model and predict
+    
+
     results_shock_skew_gm=shock_skew_gm_model.fit(update_freq=0, disp="off")
     
     conditional_volatility=results_shock_skew_gm.conditional_volatility

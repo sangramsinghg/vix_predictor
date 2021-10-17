@@ -78,9 +78,12 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Project : VIX PREDICTOR
+
 
 ![Product Name Screen Shot][product-screenshot](https://example.com)
+
+### Team: Paola Carvajal, Sangram Singh, Ahmed Mohamed, Doreen Ngo
 
 The VIX index is a forward indicator of the expected volatility of the S&P500. It moves rapidly and has continuous daily changes. It is called the "fear index". Our group applied Machine Learning and Time Series analysis to find a solution to predicting the VIX.
 
@@ -94,23 +97,52 @@ This section should list any major frameworks that you built your project using.
 * [JupyterLabs](https://jupyter.org)
 * [adaBoost Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html)
 * [SkLearn](https://scikit-learn.org/stable/)
-* [Tensorflow] (https://www.tensorflow.org/)
-* [Keras] (https://keras.io/)
-* [Facebook Prophet] (https://facebook.github.io/prophet/)
-* [Garch_Models] (
+* [Tensorflow](https://www.tensorflow.org/)
+* [Keras](https://keras.io/)
+* [Facebook Prophet](https://facebook.github.io/prophet/)
+* [Garch_Model](https://arch.readthedocs.io/en/latest/univariate/generated/arch.univariate.base.ARCHModel.html)
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Below are examples of the work done and the
+Below are examples of the necessary imports to run the code
+
+ ```sh
+  import pandas as pd
+from pathlib import Path
+import tensorflow as tf
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.models import Sequential
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler,OneHotEncoder, MinMaxScaler
+from sklearn.metrics import classification_report
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.tree import DecisionTreeClassifier
+import datetime
+import numpy as np
+import yfinance as yf
+from datetime import datetime
+from pandas.tseries.offsets import DateOffset
+import hvplot
+import hvplot.pandas
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+from vix_functions import garch_fit_and_predict, correlation_filter, retrieve_yahoo_close, retrieve_yahoo_volume
+from imblearn.over_sampling import RandomOverSampler
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import f1_score
+from sklearn.metrics import recall_score
+  ```
 
 ### Prerequisites /Installation
 
-To load all the necessary tools and files, please refer to the requirements.txt file
-  ```sh
-  npm install npm@latest -g
-  ```
+***To load all the necessary tools and files, please refer to the requirements.txt file
+
+1) cd to the directory where requirements.txt is located.
+2) activate your virtualenv.
+3) run: pip install -r requirements.txt in your shell.
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -157,26 +189,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
+Paola Carvajal - [@Github](https://github.com/paocarvajal1912) - paola.antonieta@gmail.com
+Sangram Singh - [@Github](https://github.com/sangramsinghg) - sangramsinghg@yahoo.com
+Ahmed Mohamed - [@Github](https://github.com/Ahmed-Mahjoub) -  ahmedelkarar9@gmail.com
+Doreen Ngo - [@Github](https://github.com/ngomatterwhat) - doreen.sngo@gmail.com
 
 
 

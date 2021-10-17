@@ -146,9 +146,11 @@ from sklearn.metrics import recall_score
 
 Below are images and examples of the model implementation to find the accuracy. 
 
-AdaBoost:
+AdaBoost and Neural Networks: 
 
-Neural Network:
+<img src="Images/ClassificationReportAdaboost.png" alt="Logo" width="500" height="200">
+<img src="https://github.com/sangramsinghg/vix_predictor/blob/main/Images/Good_and_bad_predictions_contrast.png" alt="Logo" width="600" height="300">
+<img src="Images/Features_importance.png" alt="Logo" width="1000" height="500">
 
 AdaBoost Models using Technical Indicators:
 

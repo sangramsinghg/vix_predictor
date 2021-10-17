@@ -71,7 +71,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#Presentation">Presentation</a></li>
   </ol>
 </details>
 
@@ -190,6 +190,14 @@ Paola Carvajal - [@Github](https://github.com/paocarvajal1912) - paola.antonieta
 Sangram Singh - [@Github](https://github.com/sangramsinghg) - sangramsinghg@yahoo.com
 Ahmed Mohamed - [@Github](https://github.com/Ahmed-Mahjoub) -  ahmedelkarar9@gmail.com
 Doreen Ngo - [@Github](https://github.com/ngomatterwhat) - doreen.sngo@gmail.com
+
+
+<!-- Presentation -->
+## Presentation
+ 
+Below is a link to the presentation slide to our project:
+
+
 
 
 

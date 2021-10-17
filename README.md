@@ -156,8 +156,8 @@ AdaBoost and Neural Networks:
 
 AdaBoost Models using Technical Indicators:
 
-<img src="Images/adaboose_technical_indicator_model_roi.png" alt="Logo" width="600" height="300">
-<img src="Images/adaboose_technical_indicator_classification_report.png" alt="Logo" width="400" height="300">
+<img src="Images/adaboost_technical_indicator_model_roi.png" alt="Logo" width="600" height="300">
+<img src="Images/adaboost_technical_indicator_classification_report.png" alt="Logo" width="400" height="300">
 
 Prophet:
 

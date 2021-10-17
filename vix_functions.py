@@ -11,21 +11,30 @@ def garch_fit_and_predict(series, ticker, horizon=1, p=1, q=1, o=1, print_series
     #p=1,q=1, o=1 
     #series=returns_df['spy']
     #horizon=1
-    
     """
-    This function takes a series of returns, and get back a series of conditional volatility
-    modeled using a GJR-GARCH with one shock, and t-student distribution of errors that accepts a skew.
+    This function takes a series of returns, and get back the GJR-GARCH time series fit for the conditional volatility, 
+    using one shock, and a t-student distribution of errors that accepts a skew.
     
-    In the NN model X is shifted in one lag to be able to predict.
-    This GARCH series is the GARCH prediction for the volatility of r series that goes in paralell.
-    Once X shift, we want to have (r_{t-1})^2 in one column, and the garch_prediction_t in another. 
-    This way we are going to include the ARCH prediction to the model.
-    If I think that I need to put e_{t-1}^2 together with garch_prediction_{t-1} I am wrong. Please think again.
+    Args:
+    series: a pandas Series containing the time series of returns for which to predict its unconditional volatility
+    ticker: a string with the security name or the time series name for the output of the model
+    horizon=1: integer. The number of future out of sample predictions of the model. It is set up to one per default.
+    p,q,1: integer parameters of the GJR-GARCH model desired. All of them are defaulted to 1.
+           For details on this parameters see:
+           https://arch.readthedocs.io/en/latest/univariate/generated/arch.univariate.base.ARCHModel.html
+    print_series_name: indicator for output messages every time a series fit is completed. It is set to False per default.
+                     When it's set to True will print the output, when set to False, it will not.
+    
+    
+    Return:
+    A pandas Series which contains the GJR-GARCH time series fit for the conditional volatility, where the predicted value for the next day is
+    set to t, where t is the last date of the time series provided. The idea is to include the out-of-sample prediction (horizon) as a feature
+    in time t to predict t+1, where t is the present moment. The returned series have already made the shift.
     """
 
     series=series.dropna()
     shock_skew_gm_model=arch_model(
-                    10*series, 
+                    series, 
                     p=p, q=q, o=o,
                     mean='constant',
                     vol='GARCH',
@@ -33,7 +42,8 @@ def garch_fit_and_predict(series, ticker, horizon=1, p=1, q=1, o=1, print_series
                     rescale=True
                     
     )
-    print(f"Processing series: {ticker}....." )
+    if print_series_name==True:
+        print(f"Processing series: {ticker}....." )
     
     
     #Fit GARCH model and predict
@@ -49,10 +59,15 @@ def garch_fit_and_predict(series, ticker, horizon=1, p=1, q=1, o=1, print_series
     serie_garch_before_shift=conditional_volatility.shift(-1)
     serie_garch_before_shift.iloc[-1,:]=forecast.variance.iloc[-1]
 
-    return serie_garch_before_shift/10000
+    return serie_garch_before_shift
 
 
 def correlation_filter(series, min_corr=0.20, key_column='^VIX', eliminate_first_column=False):
+    
+    """
+    
+    
+    """
 
     key_correlations=series.corr()[key_column]
     to_keep_columns=key_correlations[abs(key_correlations)>=min_corr].index
@@ -66,6 +81,20 @@ def correlation_filter(series, min_corr=0.20, key_column='^VIX', eliminate_first
 
 
 def retrieve_yahoo_close(ticker = 'spy', start_date = '2007-07-02', end_date = '2021-10-01'):
+    
+    """
+    This function retrieves from Yahoo Finance an individual time series of close prices from a given ticker
+    If the close price for the ticker is not available, it provides an exception.
+    
+    Args:
+    ticker: an string with the ticker to retrieve. Per default will retrieve the 'spy'
+    start_date: the start date of the time series to retrieve in the format 'YYYY-MM-DD'. Per default will use '2007-07-02'
+    end_date: the start date of the time series to retrieve in the format 'YYYY-MM-DD'. Per default will use '2021-10-01'
+    
+    Return:
+    the time series of close price for the ticker as a Pandas Series with the Date and the close price time series
+    """
+
     try:
         # get data based on ticker
         yahoo_data = yf.Ticker(ticker)
@@ -84,6 +113,19 @@ def retrieve_yahoo_close(ticker = 'spy', start_date = '2007-07-02', end_date = '
         
 # Define function to retrieve daily volume data from yahoo using ticker, start date and end date
 def retrieve_yahoo_volume(ticker = 'spy', start_date = '2007-07-02', end_date = '2021-10-01'):
+
+    """
+    This function retrieves from Yahoo Finance a time series of traded volume from a given ticker
+    If the volume for the ticker is not available, it provides an exception.
+    
+    Args:
+    ticker: an string with the ticker to retrieve. Per default will retrieve the 'spy'
+    start_date: the start date of the time series to retrieve in the format 'YYYY-MM-DD'. Per default will use '2007-07-02'
+    end_date: the start date of the time series to retrieve in the format 'YYYY-MM-DD'. Per default will use '2021-10-01'
+    
+    Return:
+    The time series of traded volume for the ticker as a Pandas Series including the Date
+    """
     try:
         # get data based on ticker
         yahoo_data = yf.Ticker(ticker)
@@ -100,7 +142,19 @@ def retrieve_yahoo_volume(ticker = 'spy', start_date = '2007-07-02', end_date = 
         print(f"Sorry, Data not available for '{ticker}': Exception is {ex}")
 
 # Define function to retrieve put daily volume data from yahoo using ticker, start date and end date
-def retrieve_yahoo_put_options_volume(ticker = 'spy', date = '2004-01-01'):
+def retrieve_yahoo_put_options_volume(ticker = 'spy', date = '2007-07-02'):
+    """
+    This functions retrieves a time series of intraday volume for a given day.
+    If the volume for the ticker is not available, it provides an exception.
+    
+    Args:
+    ticker: an string with the ticker to retrieve. Per default will retrieve the options of the SPY with 'spy'
+    date: the date for which the intraday series of options volume is retrieved, using the format 'YYYY-MM-DD'. Per default it will use '2007-07-02'
+    
+    Return:
+    The intraday volume data as a Panda Series
+    """
+
     try:
         # get data based on ticker
         yahoo_data = yf.Ticker(ticker)

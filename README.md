@@ -85,7 +85,7 @@
 
 The VIX index is a forward indicator of the expected volatility of the S&P500. It moves rapidly and has continuous daily changes. It is called the "fear index". Our group applied Machine Learning and Time Series analysis to find a solution to predicting the VIX.
 
-Through different techniques and models (AdaBoost, Neural Network, technical analysis, Facebook Prophet, Garch) we found three distinct models with more than 50% accuracy. These distinct models, techniques (PCA, Random Oversampler, Standard Scaler, Feature Selection, time series analysis, etc.) and strategies can be used to cater to wide variety of fintech customers. We use yfinance apis, google trends, economic and financial indicators to create features used in Machine Learning models.
+Through different techniques and models (AdaBoost, Neural Network, technical analysis, Facebook Prophet, Garch) we found three distinct models with more than 50% accuracy. These distinct models, techniques (PCA, Random Oversampler, Standard Scaler, Feature Selection, time series analysis, etc.) and strategies can be used to cater to wide variety of fintech customers. We use yfinance apis, google trends, economic and financial indicators to create features used in the Machine Learning models.
 
 Our ML Model Architecture is: 
 <img src="Images/model_architecture.png" alt="Logo" width="600" height="300">
@@ -156,8 +156,8 @@ AdaBoost and Neural Networks:
 
 AdaBoost Models using Technical Indicators:
 
-<img src="Images/adaboose_technical_indicator_model_roi_and_classification_report.png" alt="Logo" width="600" height="300">
-<img src="Images/adaboose_technical_indicator_model_roi_and_classification_report.png" alt="Logo" width="400" height="300">
+<img src="Images/adaboose_technical_indicator_model_roi.png" alt="Logo" width="600" height="300">
+<img src="Images/adaboose_technical_indicator_classification_report.png" alt="Logo" width="400" height="300">
 
 Prophet:
 

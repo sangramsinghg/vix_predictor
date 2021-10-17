@@ -29,7 +29,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="Images/logo_transparent.png" alt="Logo" width="400" height="400">
+    <img src="Images/logo_transparent.png" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">VIX Predictor</h3>
@@ -85,8 +85,10 @@
 
 The VIX index is a forward indicator of the expected volatility of the S&P500. It moves rapidly and has continuous daily changes. It is called the "fear index". Our group applied Machine Learning and Time Series analysis to find a solution to predicting the VIX.
 
-Through different techniques and models (AdaBoost, Neural Network, technical analysis, Facebook Prophet, Garch) we found three distinct models with more than 50% accuracy.
+Through different techniques and models (AdaBoost, Neural Network, technical analysis, Facebook Prophet, Garch) we found three distinct models with more than 50% accuracy. These distinct models, techniques (PCA, Random Oversampler, Standard Scaler, Feature Selection, time series analysis, etc.) and strategies can be used to cater to wide variety of fintech customers. We use yfinance apis, google trends, economic and financial indicators to create features used in Machine Learning models.
 
+Our ML Model Architecture is: 
+<img src="Images/model_architecture.png" alt="Logo" width="600" height="300">
 
 ### Built With
 
@@ -146,8 +148,6 @@ from sklearn.metrics import recall_score
 
 Below are images and examples of the model implementation to find the accuracy. 
 
-<img src="Images/model_architecture.png" alt="Logo" width="600" height="300">
-
 AdaBoost and Neural Networks: 
 
 <img src="Images/ClassificationReportAdaboost.png" alt="Logo" width="500" height="200">
@@ -156,7 +156,8 @@ AdaBoost and Neural Networks:
 
 AdaBoost Models using Technical Indicators:
 
-<img src="Images/adaboose_technical_indicator_model_roi_and_classification_report.png" alt="Logo" width="600" height="400">
+<img src="Images/adaboose_technical_indicator_model_roi_and_classification_report.png" alt="Logo" width="600" height="300">
+<img src="Images/adaboose_technical_indicator_model_roi_and_classification_report.png" alt="Logo" width="400" height="300">
 
 Prophet:
 

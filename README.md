@@ -146,6 +146,8 @@ from sklearn.metrics import recall_score
 
 Below are images and examples of the model implementation to find the accuracy. 
 
+<img src="Images/model_architecture.png" alt="Logo" width="500" height="200">
+
 AdaBoost and Neural Networks: 
 
 <img src="Images/ClassificationReportAdaboost.png" alt="Logo" width="500" height="200">
@@ -154,9 +156,12 @@ AdaBoost and Neural Networks:
 
 AdaBoost Models using Technical Indicators:
 
+<img src="Images/adaboose_technical_indicator_model_roi_and_classification_report.png" alt="Logo" width="500" height="200">
+
 Prophet:
 
-
+<img src="Images/prophet_time_series_analysis.png" alt="Logo" width="500" height="200">
+<img src="Images/buy_friday_sell_monday_strategy.png" alt="Logo" width="1000" height="500">
 
 
 <!-- ROADMAP -->
@@ -188,10 +193,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Paola Carvajal - [@Github](https://github.com/paocarvajal1912) - paola.antonieta@gmail.com
-Sangram Singh - [@Github](https://github.com/sangramsinghg) - sangramsinghg@yahoo.com
-Ahmed Mohamed - [@Github](https://github.com/Ahmed-Mahjoub) -  ahmedelkarar9@gmail.com
-Doreen Ngo - [@Github](https://github.com/ngomatterwhat) - doreen.sngo@gmail.com
+* Paola Carvajal - [@Github](https://github.com/paocarvajal1912) - paola.antonieta@gmail.com
+* Sangram Singh - [@Github](https://github.com/sangramsinghg) - sangramsinghg@yahoo.com
+* Ahmed Mohamed - [@Github](https://github.com/Ahmed-Mahjoub) -  ahmedelkarar9@gmail.com
+* Doreen Ngo - [@Github](https://github.com/ngomatterwhat) - doreen.sngo@gmail.com
 
 
 <!-- Presentation -->

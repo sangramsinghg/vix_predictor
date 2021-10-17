@@ -29,7 +29,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="Images/logo_transparent.png" alt="Logo" width="400" height="400">
   </a>
 
   <h3 align="center">VIX Predictor</h3>
@@ -81,15 +81,12 @@
 ## About The Project : VIX PREDICTOR
 
 
-![Product Name Screen Shot][product-screenshot](https://example.com)
-
 ### Team: Paola Carvajal, Sangram Singh, Ahmed Mohamed, Doreen Ngo
 
 The VIX index is a forward indicator of the expected volatility of the S&P500. It moves rapidly and has continuous daily changes. It is called the "fear index". Our group applied Machine Learning and Time Series analysis to find a solution to predicting the VIX.
 
 Through different techniques and models (AdaBoost, Neural Network, technical analysis, Facebook Prophet, Garch) we found three distinct models with more than 50% accuracy.
 
-<img src="images/logo.png" alt="Logo" width="80" height="80">
 
 ### Built With
 

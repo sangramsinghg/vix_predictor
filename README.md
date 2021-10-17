@@ -29,7 +29,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="Images/logo_transparent.png" alt="Logo" width="400" height="400">
+    <img src="Images/logo_transparent.png" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">VIX Predictor</h3>
@@ -85,8 +85,10 @@
 
 The VIX index is a forward indicator of the expected volatility of the S&P500. It moves rapidly and has continuous daily changes. It is called the "fear index". Our group applied Machine Learning and Time Series analysis to find a solution to predicting the VIX.
 
-Through different techniques and models (AdaBoost, Neural Network, technical analysis, Facebook Prophet, Garch) we found three distinct models with more than 50% accuracy.
+Through different techniques and models (AdaBoost, Neural Network, technical analysis, Facebook Prophet, Garch) we found three distinct models with more than 50% accuracy. These distinct models, techniques (PCA, Random Oversampler, Standard Scaler, Feature Selection, time series analysis, etc.) and strategies can be used to cater to wide variety of fintech customers. We use yfinance apis, google trends, economic and financial indicators to create features used in the Machine Learning models.
 
+Our ML Model Architecture is: 
+<img src="Images/model_architecture.png" alt="Logo" width="600" height="300">
 
 ### Built With
 
@@ -146,15 +148,21 @@ from sklearn.metrics import recall_score
 
 Below are images and examples of the model implementation to find the accuracy. 
 
-AdaBoost:
+AdaBoost and Neural Networks: 
 
-Neural Network:
+<img src="Images/ClassificationReportAdaboost.png" alt="Logo" width="500" height="200">
+<img src="https://github.com/sangramsinghg/vix_predictor/blob/main/Images/Good_and_bad_predictions_contrast.png" alt="Logo" width="600" height="300">
+<img src="Images/Features_importance.png" alt="Logo" width="1000" height="500">
 
 AdaBoost Models using Technical Indicators:
 
+<img src="Images/adaboost_technical_indicator_model_roi.png" alt="Logo" width="600" height="300">
+<img src="Images/adaboost_technical_indicator_classification_report.png" alt="Logo" width="400" height="300">
+
 Prophet:
 
-
+<img src="Images/prophet_time_series_analysis.png" alt="Logo" width="600" height="400">
+<img src="Images/buy_friday_sell_monday_strategy.png" alt="Logo" width="600" height="300">
 
 
 <!-- ROADMAP -->
@@ -186,10 +194,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Paola Carvajal - [@Github](https://github.com/paocarvajal1912) - paola.antonieta@gmail.com
-Sangram Singh - [@Github](https://github.com/sangramsinghg) - sangramsinghg@yahoo.com
-Ahmed Mohamed - [@Github](https://github.com/Ahmed-Mahjoub) -  ahmedelkarar9@gmail.com
-Doreen Ngo - [@Github](https://github.com/ngomatterwhat) - doreen.sngo@gmail.com
+* Paola Carvajal - [@Github](https://github.com/paocarvajal1912) - paola.antonieta@gmail.com
+* Sangram Singh - [@Github](https://github.com/sangramsinghg) - sangramsinghg@yahoo.com
+* Ahmed Mohamed - [@Github](https://github.com/Ahmed-Mahjoub) -  ahmedelkarar9@gmail.com
+* Doreen Ngo - [@Github](https://github.com/ngomatterwhat) - doreen.sngo@gmail.com
 
 
 <!-- Presentation -->

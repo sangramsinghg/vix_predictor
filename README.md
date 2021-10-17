@@ -197,7 +197,7 @@ Doreen Ngo - [@Github](https://github.com/ngomatterwhat) - doreen.sngo@gmail.com
  
 Below is a link to the presentation slide to our project:
 
-[VIX_PITCHDECK](VIX PITCHDECK_2.pdf)
+[VIX_PITCHDECK](https://github.com/sangramsinghg/vix_predictor/blob/main/VIX%20PITCHDECK_2.pdf)
 
 
 

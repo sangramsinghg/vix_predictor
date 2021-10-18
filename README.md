@@ -155,7 +155,7 @@ from sklearn.metrics import recall_score
 
 Below are images and examples of the model implementation to find the accuracy. 
 
-AdaBoost model: 
+### AdaBoost model: 
 
 We are able to achieve 58% accuracy with the final AdaBoost Model. We plan to use this model for our high end hedge fund customers. This model has showen a ROI of 250x
 
@@ -173,7 +173,7 @@ We see that this model exhibits 250x ROI
 
 <img src="Images/ProfitabilityPotencial.png" alt="Logo" width="600" height="300">
 
-AdaBoost Models using Technical Indicators:
+### AdaBoost Models using Technical Indicators:
 
 The AdaBoost models that uses only Technical Indicators such as simple moving averages and bollinger bands. This model shows a ROI of 42X.
 
@@ -182,7 +182,7 @@ The AdaBoost models that uses only Technical Indicators such as simple moving av
 This models shows an accuracy of 55%
 <img src="Images/adaboost_technical_indicator_classification_report.png" alt="Logo" width="400" height="300">
 
-Prophet:
+### Prophet:
 
 Prophet analysis shows that volatilty dips on Friday and spikes on Monday. This shows a potential to make money by buying VIX on Friday and Selling it on Monday.
 

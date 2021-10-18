@@ -171,7 +171,7 @@ We get 22 features that contribute to the model. These are varied from Garch var
 
 We see that this model exhibits 250x ROI
 
-<img src="Images/ProfitabilityPotencial.png" alt="Logo" width="1000" height="500">
+<img src="Images/ProfitabilityPotencial.png" alt="Logo" width="600" height="300">
 
 AdaBoost Models using Technical Indicators:
 

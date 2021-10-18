@@ -197,7 +197,9 @@ The ROI based on this basic strategy is 28x.
 <!-- ROADMAP -->
 ## Roadmap
 
-We are planning to release an MVP for our early adopters.
+* Plan to try other features and more optimizations to see if we can improve the accuracy of the model.
+* We are planning to release an MVP for our early adopters.
+* Plan to release three products - basic plan with buy friday and sell monday strategy, adaboost using Technical Indicators (with 55% accuracy as of now) and adaboost (with the 58% accuracy as of now)
 
 <!-- CONTRIBUTING -->
 ## Contributing

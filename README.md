@@ -88,6 +88,7 @@ The VIX index is a forward indicator of the expected volatility of the S&P500. I
 Through different techniques and models (AdaBoost, Neural Network, technical analysis, Facebook Prophet, Garch) we found three distinct models with more than 50% accuracy. These distinct models, techniques (PCA, Random Oversampler, Standard Scaler, Feature Selection, time series analysis, etc.) and strategies can be used to cater to wide variety of fintech customers. We use yfinance apis, google trends, economic and financial indicators to create features used in the Machine Learning models.
 
 Our ML Model Architecture is: 
+
 <img src="Images/model_architecture.png" alt="Logo" width="600" height="300">
 
 ### Built With
@@ -154,20 +155,41 @@ from sklearn.metrics import recall_score
 
 Below are images and examples of the model implementation to find the accuracy. 
 
-AdaBoost and Neural Networks: 
+AdaBoost model: 
+
+We are able to achieve 58% accuracy with the final AdaBoost Model. We plan to use this model for our high end hedge fund customers. This model has showen a ROI of 250x
 
 <img src="Images/ClassificationReportAdaboost.png" alt="Logo" width="500" height="200">
+
+We can see that our model is predicting very less negative returns as compared to the actual negative volatility.
+
 <img src="https://github.com/sangramsinghg/vix_predictor/blob/main/Images/Good_and_bad_predictions_contrast.png" alt="Logo" width="600" height="300">
+
+We get 22 features that contribute to the model. These are varied from Garch variables, treasuries, international exposure, global commodities, futures, squared returns, AAPL and the Friday effect.
+
 <img src="Images/Features_importance.png" alt="Logo" width="1000" height="500">
+
+We see that this model exhibits 250x ROI
+
+<img src="Images/ProfitabilityPotential.png" alt="Logo" width="1000" height="500">
 
 AdaBoost Models using Technical Indicators:
 
+The AdaBoost models that uses only Technical Indicators such as simple moving averages and bollinger bands. This model shows a ROI of 42X.
+
 <img src="Images/adaboost_technical_indicator_model_roi.png" alt="Logo" width="600" height="300">
+
+This models shows an accuracy of 55%
 <img src="Images/adaboost_technical_indicator_classification_report.png" alt="Logo" width="400" height="300">
 
 Prophet:
 
+Prophet analysis shows that volatilty dips on Friday and spikes on Monday. This shows a potential to make money by buying VIX on Friday and Selling it on Monday.
+
 <img src="Images/prophet_time_series_analysis.png" alt="Logo" width="600" height="400">
+
+The ROI based on this basic strategy is 28x.
+
 <img src="Images/buy_friday_sell_monday_strategy.png" alt="Logo" width="600" height="300">
 
 

@@ -180,6 +180,7 @@ The AdaBoost models that uses only Technical Indicators such as simple moving av
 <img src="Images/adaboost_technical_indicator_model_roi.png" alt="Logo" width="600" height="300">
 
 This models shows an accuracy of 55%
+
 <img src="Images/adaboost_technical_indicator_classification_report.png" alt="Logo" width="400" height="300">
 
 ### Prophet:

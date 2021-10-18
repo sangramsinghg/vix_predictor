@@ -142,6 +142,12 @@ from sklearn.metrics import recall_score
 2) activate your virtualenv.
 3) run: pip install -r requirements.txt in your shell.
 
+### Model files
+
+1) vix_adaboost_model.ipynb
+2) vix_predictor_finta.ipynb
+3) vix_predictor_prophet.ipynb
+4) vix_neural_neural_network_model.ipynb
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -169,8 +175,6 @@ Prophet:
 ## Roadmap
 
 We are planning to release an MVP for our early adopters.
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -206,7 +210,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Below is a link to the presentation slide to our project:
 
 [VIX_PITCHDECK](https://github.com/sangramsinghg/vix_predictor/blob/main/VIX%20PITCHDECK_2.pdf)
-
 
 
 
